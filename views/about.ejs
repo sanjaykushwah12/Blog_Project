@@ -1,0 +1,17 @@
+<%- include('header.ejs') %>
+<section class="cmspage mtb-40">
+  <div class="container">
+    <h1 class="text-center">About</h1>
+  </div>
+  <img src="/IMAGE/about1.jpg" alt="banner" class="mb-4 w-100" />
+</div>
+    <% fa.forEach((item)=>{  %> 
+    <div class="page-desc">
+      
+      <p class="p-3 "><%= item.description %></p>
+  
+  </div>
+<% }) %>
+</section>
+
+<%- include('footer.ejs') %>

@@ -1,0 +1,39 @@
+<%- include('header.ejs') %>
+<section class="banner">
+  <div class="banner-box">
+    <div class="intro-text">
+      <h1 style="font-size: 85px; font-family: monospace">
+        Let's <span style="color: rgb(147, 218, 34)"> Explore</span> The
+        <span style="color: rgb(147, 218, 34)">World</span>
+      </h1>
+    </div>
+    <img src="/IMAGE/banner01.jpg" alt="banner" />
+  </div>
+</section>
+
+<section class="featured-blog mtb-40">
+  <div class="container">
+    <div class="row">
+      <% d.forEach((item)=>{ %>
+      <div class="col-md-4">
+        <div class="blog-box">
+          <img
+            src="<%= item.image.url %>"
+            width="250"
+            height="250"
+            alt="blog1"
+          />
+
+          <h3><%= item.title %></h3>
+          <p><%= item.createdAt.toLocaleDateString() %></p>
+          <p><%= item.description.slice(0,90) %></p>
+          <a href="/blogdetail/<%= item._id %>" class="btn btn-danger"
+            >Read more...</a
+          >
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+<%- include('footer.ejs') %>

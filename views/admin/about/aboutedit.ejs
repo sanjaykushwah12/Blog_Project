@@ -1,0 +1,57 @@
+
+<%- include('../../adminheader.ejs')%>
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dash-left">
+                        <ul>
+                            <li class="active"><a href="/admin/dashboard">Dashboard</a></li>
+                            <li><a href="/admin/blogdisplay" >Blogs</a></li>
+                            <li><a href="/admin/categorydisplay" >Categories</a></li>
+                            <li><a href="/admin/contactdisplay">Contact</a></li>
+                            <li><a href="/admin/aboutdisplay" class="active">About</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="col-md-9">
+                    <div class="dash-right">
+                        <div class="dash-header">
+                            <div class="dash-title">
+                                <h1>About</h1>
+                            </div>
+                          
+                        </div>
+                        <form method="post" action="/aboutupdate/<%= ae._id %>" >
+                          
+                            
+                          
+                            <div class="form-group form-row">
+                                <label class="col-md-3 required">Description *</label>
+                                <div class="col-md-9">
+                                  <textarea name="description" rows="5" class="form-control" placeholder="Description" required ><%= ae.description %></textarea>
+                                </div>
+                            </div>
+                          
+                            
+                            <div class="form-group form-row">
+                                <label class="col-md-3"></label>
+                                <div class="col-md-9">
+                                    
+                                <button type="submit" class="btn btn-primary">Update</button>
+                                </div>
+                             </div>
+                          
+            
+                        
+                    </form>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('../../footer.ejs')%>
